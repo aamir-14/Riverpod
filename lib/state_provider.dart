@@ -48,7 +48,7 @@ class _ProviderStateState extends ConsumerState<ProviderState> {
 
             Consumer(builder: (context, ref, child){
               final _ref = ref.watch(swit);
-              print("Switch");
+              debugPrint("Switch");
               return Switch(value: _ref, onChanged: (value){
 
                 ref.read(swit.notifier).state = value;
@@ -61,7 +61,7 @@ SizedBox(height: 20,),
               mainAxisAlignment: .center,
               children: [
                 ElevatedButton(onPressed: (){
-              print("Increase");
+              debugPrint("Increase");
 
               ref.read(count.notifier).state ++;
 
@@ -70,7 +70,7 @@ SizedBox(height: 20,),
             SizedBox(width: 20,),
 
              ElevatedButton(onPressed: (){
-              print("Decrease");
+              debugPrint("Decrease");
 
               ref.read(count.notifier).state --;
 
@@ -87,7 +87,7 @@ SizedBox(height: 20,),
   
 }
 
-
+}
 
 
 

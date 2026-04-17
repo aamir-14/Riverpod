@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod/legacy.dart';
-import 'package:riverpod_journey/homeScree.dart';
-import 'package:riverpod_journey/state_provider.dart';
+
+import 'package:riverpod_journey/multiple%20_state_with_provider/multiple_state.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
         
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ProviderState()
+      home: MultipleStateProvider()
     )
     );
   }
