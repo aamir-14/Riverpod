@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_journey/state_notifier_provider/crud_operations/item_screen.dart';
 import 'package:riverpod_journey/state_notifier_provider/home.dart';
 
 import 'package:riverpod_journey/multiple%20_state_with_provider/multiple_state.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SearchScreen()
+      home: ItemScreen()
     )
     );
   }

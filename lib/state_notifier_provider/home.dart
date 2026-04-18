@@ -52,6 +52,8 @@ class SearchScreen extends ConsumerWidget {
                       height: 200,
                       width: 215,
                       decoration: BoxDecoration(
+                        
+                          
                        color: slider ? const Color.fromARGB(255, 234, 221, 82) : Colors.red,
                        border: Border.all(color: Colors.black),
                        borderRadius: BorderRadius.circular(150)
@@ -75,7 +77,25 @@ class SearchScreen extends ConsumerWidget {
               
                     }),
                   );
-                })
+                }),
+                SizedBox(height: 20,
+                ),
+                Container(
+                  height: 200,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Colors.black.withValues(alpha: 0.5),
+                      const Color.fromARGB(255, 162, 27, 27).withValues(alpha: 0.5),
+                      const Color.fromARGB(255, 219, 178, 14).withValues(alpha: 0.5),
+                      const Color.fromARGB(255, 50, 4, 216).withValues(alpha: 0.5),
+                      const Color.fromARGB(255, 2, 233, 217).withValues(alpha: 0.5),
+
+                    ]
+                    ),
+                    borderRadius: BorderRadius.circular(130)
+                  ),
+                )
                 ],
               ),
             );
