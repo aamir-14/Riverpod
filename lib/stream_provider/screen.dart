@@ -12,13 +12,19 @@ class StreamScreen extends ConsumerWidget {
     
     return Scaffold(
       body: Consumer(builder: (context, ref, child){
+        
         final Provider = ref.watch(stream);
         return Center(
-        child: Provider.when(data: (time)=> Text(
+        child: Provider.when(
+          skipLoadingOnRefresh: false,
+          data: (time)=> Text(
               "${time.hour}:${time.minute}:${time.second}",
               style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
             ),
-         error: (error, stack)=> Text(error.toString()),
+         error: (error, stack)=> TextButton(onPressed: (){
+          ref.invalidate(stream);
+
+         }, child: Text(error.toString()),),
           loading: ()=> Center(child: CircularProgressIndicator(),),)
       );
       }

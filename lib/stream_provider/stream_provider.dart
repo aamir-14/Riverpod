@@ -12,7 +12,9 @@ final stream = StreamProvider<DateTime>((ref) async*{
 
 while (true){
 await Future.delayed(Duration(seconds: 1));
-yield DateTime.now();
+
+throw"error";
+//yield DateTime.now();
 
 }
 
